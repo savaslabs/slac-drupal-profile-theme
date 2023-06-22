@@ -23,7 +23,7 @@
   position: relative;
 
   > img {
-    height: var(--hero-bg-image-height);
+    height: 95vh;
     object-fit: cover;
     width: 100%;
   }
@@ -35,10 +35,7 @@
     );
 
     > img {
-      height: calc(
-        var(--hero-bg-image-height) + var(--gesso-header-initial-height) +
-          var(--gesso-global-header-height)
-      );
+      height: 95vh;
     }
 
     @include breakpoint-min(gesso-breakpoint(mobile-menu) + 1px) {
@@ -49,11 +46,7 @@
       );
 
       > img {
-        height: calc(
-          var(--hero-bg-image-height) + var(--gesso-header-initial-height) +
-            var(--gesso-internal-header-height) +
-            var(--gesso-global-header-height)
-        );
+        height: 99vh;
       }
     }
   }
@@ -62,14 +55,20 @@
     color: var(--gesso-text-color);
     display: table;
     margin-bottom: rem(gesso-spacing(1));
+    font-size: 1rem;
   }
 }
 
 .c-hero-bg-image__content {
-  margin-top: -120px;
-  position: relative;
+  position: absolute;
+  bottom: 0;
 
+  > .l-constrain {
+    padding: 0 1rem;
+  }
   @include breakpoint-min(gesso-breakpoint(tablet)) {
+    margin-top: -120px;
+    position: relative;
     bottom: 0;
     left: 50%;
     margin-top: 0;
@@ -80,6 +79,7 @@
 
     > .l-constrain {
       display: flex;
+      padding: 0 2rem;
 
       .c-hero-bg-image--left & {
         justify-content: flex-start;
@@ -93,12 +93,7 @@
 }
 
 .c-hero-bg-image__overlay {
-  background: linear-gradient(
-    180deg,
-    gesso-grayscale(white) -45.6%,
-    rgba(gesso-grayscale(white), 0.51) -27.4%,
-    gesso-grayscale(white) 25.2%
-  );
+  background: linear-gradient(180deg, #FFFFFF -45.6%, rgba(255, 255, 255, 0.51) -27.4%, #FFFFFF 35.54%);
   border-top: 8px solid gesso-brand(poppy, light);
   padding: gesso-site-margins(mobile);
 
@@ -116,6 +111,12 @@
   color: inherit;
   margin-bottom: gesso-spacing(2);
   text-align: left;
+  color: inherit;
+  text-align: left;
+  font-size: 1.9rem;
+  @include breakpoint-min(gesso-breakpoint(tablet)) {
+    font-size: 2.375rem;
+  }
 }
 
 .c-hero-bg-image__summary {
@@ -124,6 +125,7 @@
 
   p:last-child {
     margin-bottom: 0;
+    font-size: 1rem;
   }
 }
 
@@ -132,6 +134,12 @@
 
   .c-button {
     margin-bottom: 0;
+    padding: 0.75rem 1.875rem 0.75rem 1.875rem;
+    transition: all 0.5s ease-out;
+    &::after {
+      width: 1.3rem;
+      height: 1.3rem;
+    }
   }
 }
 
