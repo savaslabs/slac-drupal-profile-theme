@@ -1,0 +1,129 @@
+// @file
+// Component: support-detail
+@use '00-config' as *;
+.p-support {
+    margin: 0 auto;
+    @include breakpoint-min(gesso-breakpoint(tablet)) {
+    max-width: 986px;
+  }
+  @include breakpoint-min(gesso-breakpoint(desktop)) {
+    max-width: 817px;
+  }
+
+  &__topic {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem !important;
+    line-height: 140%;
+    letter-spacing: 0.15em;
+    color: #2E2D29;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 3rem !important;
+    color: #2E2D29;
+    line-height: 3.625rem;
+    margin-bottom: 3.125rem;
+    display: block;
+  }
+
+  &__content {
+    padding-bottom: 80px;
+
+    h2 {
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 59px;
+      margin-top: 25px;
+      margin-bottom: 15px;
+    }
+
+    h3 span {
+      font-size: 24px !important;
+    }
+
+    p,
+    ol,
+    ul {
+      color: #2E2D29 !important;
+      font-family: 'Merriweather' !important;
+      font-feature-settings: 'pnum'on, 'lnum'on, 'salt'on, 'liga'off;
+      font-style: normal !important;
+      font-weight: 400 !important;
+      font-size: 16px !important;
+      line-height: 32.4px !important;
+    }
+
+    p {
+      padding-left: 0;
+      position: relative;
+      margin-bottom: 15px !important;
+    }
+
+    p>span {
+      font-size: 16px !important;
+      font-family: 'Merriweather' !important;
+      font-feature-settings: 'pnum'on, 'lnum'on, 'salt'on, 'liga'off;
+    }
+
+    a {
+      position: relative;
+      font-family: 'Merriweather';
+      font-feature-settings: 'pnum'on, 'lnum'on, 'salt'on, 'liga'off;
+      font-style: normal;
+      font-size: 16px;
+      font-weight: 400;
+      color: #2E2D29;
+      text-decoration: underline;
+      text-underline-offset: 6px;
+
+      &:hover {
+        color: #B1040E;
+        text-decoration: underline;
+        text-underline-offset: 6px;
+      }
+    }
+
+    ul li span,
+    ol li span {
+      font-size: 18px !important;
+      font-family: 'Merriweather' !important;
+      font-feature-settings: 'pnum'on, 'lnum'on, 'salt'on, 'liga'off;
+    }
+
+    li {
+      &::marker {
+        color: #B1040E !important;
+      }
+    }
+
+    .external-link {
+      &:hover {
+        color: #B1040E;
+        text-decoration: underline;
+        text-underline-offset: 6px;
+
+        svg {
+          transform: translate(3px, -3px);
+        }
+      }
+
+      svg {
+        width: 11px;
+        height: 11px;
+        margin: 0 4px;
+        vertical-align: middle;
+        transition: transform 150ms ease-out;
+
+        path {
+          fill: currentColor;
+        }
+      }
+    }
+  }
+}
