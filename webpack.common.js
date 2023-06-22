@@ -71,9 +71,9 @@ module.exports = {
         ],
       },
     }),
-    new StylelintPlugin({
-      exclude: ['node_modules', 'dist', 'storybook'],
-    }),
+    // new StylelintPlugin({
+    //   exclude: ['node_modules', 'dist', 'storybook'],
+    // }),
     new SpriteLoaderPlugin(),
   ],
   module: {
