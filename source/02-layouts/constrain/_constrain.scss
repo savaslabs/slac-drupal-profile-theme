@@ -4,7 +4,7 @@
 @use '00-config' as *;
 
 .l-constrain {
-  @include layout-constrain();
+  @include layout-constrain(gesso-constrain(lg), 1rem, 2rem);
 }
 
 .l-constrain--large {
