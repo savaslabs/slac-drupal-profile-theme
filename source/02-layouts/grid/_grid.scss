@@ -69,6 +69,14 @@ $nested-grid-gutter: gesso-spacing(2);
     }
   }
 
+  @include breakpoint-min(gesso-breakpoint(tablet)) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint-min(gesso-breakpoint(desktop)) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   @supports not (container-type: inline-size) {
     @include breakpoint-min-max(760px, gesso-breakpoint(desktop-lg)) {
       .l-grid & {

@@ -13,6 +13,7 @@ import largeEventCardData from './card-event-large.yml';
 import bioCardData from './card-bio.yml';
 import globalData from '../../00-config/storybook.global-data.yml';
 import { decorators, sectionTypeArg } from '../../06-utility/storybookHelper';
+import './card';
 
 const settings = {
   title: 'Paragraphs/Card',
