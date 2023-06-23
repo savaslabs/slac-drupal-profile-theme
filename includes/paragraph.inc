@@ -18,6 +18,7 @@ function slac_preprocess_paragraph(&$vars) {
  */
 function slac_preprocess_paragraph__section(&$vars) {
   $content = $vars['content'];
+  $paragraph = $vars['paragraph'];
   if (!empty($vars['attributes']['class'])) {
     foreach ($vars['attributes']['class'] as $class) {
       if (str_contains($class, 'l-section--dark')) {
@@ -56,6 +57,8 @@ function slac_preprocess_paragraph__section(&$vars) {
       }
     }
   }
+  $section_class = strtolower(str_replace(' ', '-', $paragraph->field_text->value));
+  $vars['attributes']['class'][] = $section_class;
   $vars['content'] = $content;
 }
 

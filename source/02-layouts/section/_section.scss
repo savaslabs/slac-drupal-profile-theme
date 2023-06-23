@@ -4,6 +4,15 @@
 
 .l-section {
   background-color: var(--gesso-background-color);
+  .l-constrain {
+    @include breakpoint-min(gesso-breakpoint(tablet)) {
+      max-width: 986px;
+      margin: 0 auto;
+    }
+    @include breakpoint-min(gesso-breakpoint(desktop)) {
+      max-width: 1278px;
+    }
+  }
 }
 
 .l-section:not(.l-section--no-padding) {
