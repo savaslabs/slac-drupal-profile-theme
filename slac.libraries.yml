@@ -10,6 +10,7 @@ global:
     dist/js/transitions.es6.js: {}
     dist/js/embed.es6.js: {}
     dist/js/search.es6.js: {}
+    dist/js/card.js: {}
   dependencies:
     - slac/common
     - core/drupal

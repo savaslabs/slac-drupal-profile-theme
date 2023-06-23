@@ -65,6 +65,13 @@
 
   > .l-constrain {
     padding: 0 1rem;
+    @include breakpoint-min(gesso-breakpoint(tablet)) {
+      max-width: 986px;
+      margin: 0 auto;
+    }
+    @include breakpoint-min(gesso-breakpoint(desktop)) {
+      max-width: 1278px;
+    }
   }
   @include breakpoint-min(gesso-breakpoint(tablet)) {
     margin-top: -120px;
