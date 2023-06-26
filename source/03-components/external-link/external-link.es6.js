@@ -14,9 +14,9 @@ Drupal.behaviors.externalLinks = {
     function linkIsExternal(linkElement) {
       let isExternal = true;
       if (
-        linkElement.host === 'www6.slac.stanford.edu' ||
-        linkElement.host.endsWith('.slac.stanford.edu') ||
-        linkElement.host === 'sallie.stanford.edu' ||
+        // linkElement.host === 'www6.slac.stanford.edu' ||
+        // linkElement.host.endsWith('.slac.stanford.edu') ||
+        // linkElement.host === 'sallie.stanford.edu' ||
         linkElement.host === window.location.host
       ) {
         isExternal = false;
