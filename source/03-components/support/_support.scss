@@ -32,6 +32,8 @@
         padding-right: 3rem;
         font-size: 1.25rem;
         font-weight: 300;
+        z-index: 3;
+        position: relative;
 
         &::placeholder {
           color: #2e2d29;
@@ -76,10 +78,14 @@
     }
 
     #search-results {
-      padding: 1rem 0;
-      margin: -2rem 0.5rem 0;
+      margin: 0 0.5rem;
+      background: white;
+      z-index: 1;
+      position: relative;
+      top: -1.7rem;
+
       ul {
-        padding: 0;
+        padding: 1rem 0;
         list-style: none;
         li {
           a {
@@ -174,6 +180,26 @@
     display: none;
     &:hover {
       transform: scale(1.01);
+    }
+  }
+
+  &__preview {
+    margin-top: 4rem;
+
+    h2 {
+      font-size: 1.875rem;
+      margin-bottom: 2rem;
+      font-weight: bold;
+    }
+    form {
+      margin-bottom: 2rem;
+    }
+
+    a {
+      font-weight: bold;
+      svg {
+        color: #B1040E;
+      }
     }
   }
 }

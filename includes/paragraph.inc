@@ -58,6 +58,9 @@ function slac_preprocess_paragraph__section(&$vars) {
     }
   }
   $section_class = strtolower(str_replace(' ', '-', $paragraph->field_text->value));
+  if ($section_class == 'support') {
+    $vars['search_form'] = \Drupal::formBuilder()->getForm('Drupal\slac_servicenow\Form\SearchForm');
+  }
   $vars['attributes']['class'][] = $section_class;
   $vars['content'] = $content;
 }
