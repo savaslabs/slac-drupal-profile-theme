@@ -389,6 +389,15 @@ $card-padding: 30px;
   }
 }
 
+.l-section--dark,
+.l-section--yellow {
+  .c-card {
+    &__body {
+      padding: 1rem;
+    }
+  }
+}
+
 .c-paragraph--type-section .view-all {
   border: 1px solid #fff;
   border-radius: 4px;
