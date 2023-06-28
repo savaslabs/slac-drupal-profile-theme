@@ -103,9 +103,9 @@
   </div>
 {% endif %}
 
-{% set sidebar %}{% apply spaceless %}
+{# {% set sidebar %}{% apply spaceless %}
   {{- drupal_entity('block', 'side_nav') -}}
-{% endapply %}{% endset %}
+{% endapply %}{% endset %} #}
 
 {% include '@templates/page/page.twig' with {
   'title': hero_type == 'two_column_hero' ? null : label,
