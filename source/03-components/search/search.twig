@@ -10,13 +10,13 @@
 {% set people_id = 'search_type_people'|unique_id %}
 
 <div {{ add_attributes({ class: classes } ) }}>
-  <button class="c-search__button" aria-expanded="true" aria-controls="{{ search_form_id }}">
+  <!-- <button class="c-search__button" aria-expanded="true" aria-controls="{{ search_form_id }}">
     Search
-    {% include '@components/icon/icon.twig' with {
+    {# {% include '@components/icon/icon.twig' with {
       'icon_name': 'search',
       'is_hidden': true
-    } %}
-  </button>
+    } %} #}
+  </button> -->
   <form class="c-search__form" id="{{ search_form_id }}" method="get" hidden tabindex="-1">
     <div class="l-constrain l-constrain--small">
       <div class="c-search__inner">
