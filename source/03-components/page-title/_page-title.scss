@@ -7,6 +7,21 @@
 
   h1 {
     margin: 0;
+    
+  }
+
+  .l-constrain {
+    @include breakpoint-min(gesso-breakpoint(tablet)) {
+      max-width: 986px;
+      margin: 0 auto;
+    }
+    @include breakpoint-min(gesso-breakpoint(desktop)) {
+      max-width: 1278px;
+    }
+    @include breakpoint-min(1278px) {
+      padding: 0 2rem !important;
+    }
+    
   }
 
   h1 + p {
@@ -18,6 +33,7 @@
       padding-inline: gesso-site-margins(mobile);
     }
   }
+
 }
 
 .c-page-title__icon {

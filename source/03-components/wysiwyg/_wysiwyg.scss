@@ -2,8 +2,8 @@
 
 .c-wysiwyg,
 .ck-content {
-  @include display-text-style(body);
-  @include layout-constrain(gesso-constrain(sm));
+  //@include display-text-style(body);
+  //@include layout-constrain(gesso-constrain(sm));
   color: var(--gesso-text-color);
   display: flow-root;
 
